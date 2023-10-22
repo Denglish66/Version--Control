@@ -1,0 +1,32 @@
+# Dana English
+def encode (password):
+    encoded_password = ""
+    for number in password:
+        added_number = str((int(number) + 3) % 10)  # add each number by 3
+        encoded_password += added_number
+    return encoded_password
+
+def main():
+ #Looping until quit
+ while True:
+     print("Menu")
+     print("-------------")
+     print("1. Encode")
+     print("2. Decode")
+     print("3. Quit")
+     print("")
+     choice = input("Please enter an option: ")
+
+     if choice == "1":
+         password = input("Please enter your password to encode: ")
+         encoded_password = encode(password)
+         print("Your password has been encoded and stored!")
+         print("")
+
+     elif choice == "2":
+         pass
+     elif choice == "3":
+      break
+
+if __name__ == '__main__':
+    main()
